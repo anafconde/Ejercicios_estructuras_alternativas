@@ -91,4 +91,3 @@ Una compañía de transporte internacional tiene servicio en algunos países de 
 Parte de su política implica que los paquetes con un peso superior a 5 kg no son transportados, esto por cuestiones de logística y de seguridad. Realice un algoritmo para determinar el cobro por la entrega de un paquete o, en su caso, el rechazo de la entrega.
 ```
 
-¡Ahora los ejercicios están acompañados de iconos para hacerlos más visuales! 🎉
