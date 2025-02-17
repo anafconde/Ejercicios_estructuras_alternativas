@@ -1,7 +1,8 @@
+
 usuario = input("Introduce el nombre de usuario: ")
 contraseña = input("Introduce la contraseña: ")
 
-if usuario == "pepe" and contraseña == "asdasd":
+if usuario == "alvaro" and contraseña == "alvaro123":
     print("Has entrado al sistema.")
 else:
-    print("Error: Nombre de usuario o contraseña incorrectos.")
+    print("Error: Usuario o contraseña incorrectos.")

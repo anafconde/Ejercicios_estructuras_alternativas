@@ -1,3 +1,4 @@
+
 num = int(input("Introduce un número: "))
 
 if num % 2 == 0:
