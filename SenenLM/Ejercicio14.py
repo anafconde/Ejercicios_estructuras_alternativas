@@ -10,14 +10,21 @@
 #Meterle el precio inicial y los kilos para calcularlo
 tamaño=int(input("Introduce el tamaño(1/2): "))
 tipo=(input("Introduce el tipo de UVA(A/B): "))
-
+ajuste_precio = 0.0
 if tipo == 'A':
     if tamaño == 1:
-        suma1A = 20
+        ajuste_precio = 20
     elif tamaño == 2:
-        suma1B = 30
+        ajuste_precio = 30
 elif tipo == 'B':
     if tamaño == 1:
-        suma2A = 30
+        ajuste_precio = -30
     elif tamaño == 2:
-        suma2B = 50
+        ajuste_precio = -50
+kilos=float(input("Introduce los kilos que has comprado: "))
+precioini=float(input("Introduce el precio inicial/kilo de la uva: "))
+precio_final = precioini + ajuste_precio
+precioinicial = precioini * kilos
+precioganancia = precio_final * kilos
+gananciatotal = precioganancia - precioinicial
+print("Has ganado: ", gananciatotal, "€")
