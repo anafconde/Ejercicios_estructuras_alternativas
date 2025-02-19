@@ -12,18 +12,11 @@ a=float(input("Introduce el lado A: "))
 b=float(input("Introduce el lado B: "))
 c=float(input("Introduce el lado C: "))
 
-if c**2==((a**2)+(b**2)):
+if c**2==((a**2)+(b**2)) or a**2==((b**2)+(c**2)) or b**2==((c**2)+(a**2)):
     print("El triangulo introducido es un TRIANGULO RECTANGULO")
 elif a==b and b==c:
     print("El triangulo es un TRIANGULO EQUILATERO")
-elif a==b:
-    if a!=c:
-        print("El triangulo introducido es un TRIANGULO ISOSCELES")
-elif c==b:
-    if c!=a:
-        print("El triangulo introducido es un TRIANGULO ISOSCELES")
-elif a==c:
-    if a!=b:
-        print("El triangulo introducido es un TRIANGULO ISOSCELES")
+elif a==b or b==c or a==c:
+   print("El triangulo introducido es un TRIANGULO ISOSCELES")
 else:
     print("El triangulo es un TRIANGULO ESCALENO")
