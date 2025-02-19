@@ -1,2 +1,0 @@
-#Version
-#Enunciado del algoritmo
