@@ -8,4 +8,15 @@
 #Si los 3 lados son iguales entonces es equilátero.
 #Si no se cumple ninguna de las condiciones anteriores, es escaleno.
 
+A=float(input("Dime un lado del triángulo: "))
+B=float(input("Dime otro lado del triángulo: "))
+C=float(input("Dime otro lado del triángulo: "))
 
+if (A**2+B**2)==(C**2):
+     print(f"El triángulo cumple Pitágoras y es un triángulo rectángulo")
+elif A==B!=C:
+     print(f"El triángulo es isósceles")
+elif A==B==C:
+     print(f"El triángulo es equilátero")
+else:
+     print(f"El triángulo es escaleno")
