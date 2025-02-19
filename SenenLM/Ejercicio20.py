@@ -15,7 +15,11 @@
 
 #version 1.0
 #author Senén Lara
-
+print("1. America del Norte")
+print("2. America Central")
+print("3. America Del Sur")
+print("4. Europa")
+print("5. Asia")
 pais=int(input("Introduce el pais donde se esta realizando la entrega (1-5): "))
 peso_paquete = float(input("Introduce el peso del paquete en kilogramos: "))
 if peso_paquete > 5:
