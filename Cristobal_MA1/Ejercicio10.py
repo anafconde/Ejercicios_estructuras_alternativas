@@ -24,11 +24,11 @@ if d > (r1+r2):
     print("Son exteriores")
 elif d==(r1+r2):
     print("Son tangentes exteriores")
-elif (abs(r1)-abs(r2)) < d < (r1+r2):
+elif (abs(r1-r2)) < d < (r1+r2):
     print("Son secantes")
-elif d == (abs(r1)-abs(r2)):
+elif d == (abs(r1-r2)):
     print("Son tangentes interiores")
-elif d < (abs(r1)-abs(r2)):
+elif d < (abs(r1-r2)):
     print("Son interiores")
 else:
     print("Son concentricos")
