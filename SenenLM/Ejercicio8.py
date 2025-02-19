@@ -10,8 +10,8 @@ nota=int(input("Introduce la nota: "))
 edad=int(input("Introduce la edad: "))
 sexo=(input("Introduce el sexo (M/F): "))
 
-if nota > 5:
-    if edad > 18:
+if nota >= 5:
+    if edad >= 18:
         if sexo == 'F':
             print("Aceptada")
         elif sexo == 'M':
