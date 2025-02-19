@@ -4,13 +4,28 @@
 #Ejercicio 18
 #Realiza un programa que pida el día de la semana (del 1 al 7) y escriba el día correspondiente. Si introducimos otro número nos da un error.
 
-def obtener_dia(numero):
-# Devuelve el nombre del día correspondiente al número ingresado.
-    dias_semana = {1: "Lunes", 2: "Martes", 3: "Miércoles", 4: "Jueves", 5: "Viernes", 6: "Sábado", 7: "Domingo"}
-    return dias_semana.get(numero, "ERROR: número incorrecto")
+# Pedir al usuario que ingrese el día de la semana
+dia_semana = int(input("Ingresa el día de la semana (1-7): "))
 
-# Solicitar el día de la semana
-numero = int(input("Introduce el número del día de la semana (1-7): "))
+# Verificar si el número es válido
+if dia_semana < 1 or dia_semana > 7:
+    print("ERROR: Número incorrecto.")
+else:
+# Determinar el día de la semana
+    if dia_semana == 1:
+        dia = "Lunes"
+    elif dia_semana == 2:
+        dia = "Martes"
+    elif dia_semana == 3:
+        dia = "Miércoles"
+    elif dia_semana == 4:
+        dia = "Jueves"
+    elif dia_semana == 5:
+        dia = "Viernes"
+    elif dia_semana == 6:
+        dia = "Sábado"
+    else:
+        dia = "Domingo"
 
-# Mostrar el día correspondiente o error
-print(obtener_dia(numero))
+# Mostrar el día de la semana
+    print(f"El día {dia_semana} de la semana es el {dia}")
