@@ -8,7 +8,7 @@ n2=int(input("Dime un segundo número:"))
 n3=int(input("Dime un tercer número:"))
 
 if n1>=n2 and n1>=n3 and n2>=n3:
-    print(f"El orden de los números de mayor a menor es: {n1} {n2} {n3}")
+   
 elif n1>=n2 and n1>=n3 and n2<=n3:
     print(f"El orden de los números de mayor a menor es: {n1} {n3} {n2}")
 
