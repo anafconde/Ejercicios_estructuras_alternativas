@@ -10,7 +10,7 @@ if tipo == "A":
     elif tamano == "2":
         ajuste = 0.30
     else:
-        ajuste = 0  # O mostrar error si el tamaño es inválido
+        ajuste = 0
 elif tipo == "B":
     if tamano == "1":
         ajuste = -0.30
