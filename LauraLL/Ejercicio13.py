@@ -8,17 +8,22 @@ dia=int(input("Introduzca el día de la fecha a comprobar "))
 mes=int(input("Introduzca el mes de la fecha a comprobar "))
 anyo=int(input("Introduzca el año de la fecha a comprobar "))
 
-#Comprobamos que el año es un numero natural entre el año 0 (una fecha rara pero supongo que posible), hasta el 2025 que es el año actual
-if anyo>=0 and anyo<=2025:
-    #Comprobamos que el mes es un número entre el 1 y el 12
+#Comprobamos que el año es bisiesto o no
+if ((anyo%4)==0 and (anyo%100)!=0) or (anyo%400)==0:
+    if mes==2:
+        if dia>=1 and dia<=29:
+            print(f"La fecha introducida del año {anyo}, del mes {mes} y día {dia} es correcta")
+        else:
+            print(f"La fecha introducida del año {anyo}, del mes {mes} y día {dia} es INCORRECTA")
+else:
     if mes>=1 and mes<=12:
-        #Comprobamos primero los meses de 30 días para verificar el último paso, el día
+        #Comprobamos los meses de 30 días para verificar el último paso, el día
         if mes==4 or mes==6 or mes==9 or mes==11:
             if dia>=1 and dia<=30:
                 print(f"La fecha introducida del año {anyo}, del mes {mes} y día {dia} es correcta")
             else:
                 print(f"La fecha introducida del año {anyo}, del mes {mes} y día {dia} es INCORRECTA")
-        #Comprobamos el mes de febrero (vamos a suponer que no es un año bisiesto)
+        #Comprobamos el mes de febrero
         elif mes==2:
             if dia>=1 and dia<=28:
                 print(f"La fecha introducida del año {anyo}, del mes {mes} y día {dia} es correcta")
@@ -32,5 +37,3 @@ if anyo>=0 and anyo<=2025:
                 print(f"La fecha introducida del año {anyo}, del mes {mes} y día {dia} es INCORRECTA")
     else:
         print(f"La fecha introducida del año {anyo}, del mes {mes} y día {dia} es INCORRECTA")
-else:
-    print(f"La fecha introducida del año {anyo}, del mes {mes} y día {dia} es INCORRECTA")
