@@ -12,17 +12,17 @@ n_alum=int(input("Introduzca el número de alumnos que asistirán al viaje de es
 if n_alum>=100:
     costo=65
     pago=costo*n_alum
-    print(f"Para un viaje de {n_alum}, cada alumno deberá pagar un total de {pago} €")
+    print(f"Para un viaje de {n_alum}, el coste del autobús es de {pago} € y cada alumno deberá pagar {costo} €")
 elif n_alum>=50 and n_alum<=99:
     costo=70
     pago=costo*n_alum
-    print(f"Para un viaje de {n_alum}, cada alumno deberá pagar un total de {pago} €")
+    print(f"Para un viaje de {n_alum}, el coste del autobús es de {pago} € y cada alumno deberá pagar {costo} €")
 elif n_alum>=30 and n_alum<=49:
     costo=95
     pago=costo*n_alum
-    print(f"Para un viaje de {n_alum}, cada alumno deberá pagar un total de {pago} €")
+    print(f"Para un viaje de {n_alum}, el coste del autobús es de {pago} € y cada alumno deberá pagar {costo} €")
 elif n_alum>=0 and n_alum<=29:
     pago=4000/n_alum
-    print(f"Para un viaje de {n_alum}, cada alumno deberá pagar un total de {pago} €")
+    print(f"Para un viaje de {n_alum}, el coste del autobús es de 4000 € y cada alumno deberá pagar {pago} €")
 else:
     print("Valor introducido erróneo")

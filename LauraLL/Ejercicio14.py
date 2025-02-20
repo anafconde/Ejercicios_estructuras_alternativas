@@ -16,6 +16,8 @@ kilos=float(input("Indique cuántos kilos va a vender: "))
 tipo=input("Indique el tipo (A | B): ")
 tamaño=int(input("Indique el tamaño (1 | 2): "))
 
+tipo=tipo.upper()
+
 #Compruebo que los valores de tipo y tamaño estén bien escritos
 if (tipo != "A" and tipo != "B") or (tamaño != 1 and tamaño != 2):
     print("Error, uno de los valores introducidos no es válido")
