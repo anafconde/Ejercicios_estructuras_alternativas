@@ -13,7 +13,7 @@ numero_dado = int(input("Ingresa el número del dado (1-6): "))
 if numero_dado < 1 or numero_dado > 6:
     print("ERROR: número incorrecto.")
 else:
-    # Determinar la cara opuesta
+# Determinar la cara opuesta
     if numero_dado == 1:
         cara_opuesta = "6"
     elif numero_dado == 2:
@@ -24,8 +24,10 @@ else:
         cara_opuesta = "3"
     elif numero_dado == 5:
         cara_opuesta = "2"
-    else:
+    elif numero_dado == 6:
         cara_opuesta = "1"
+    else:
+        print("ERROR: número incorrecto.")
 
-    # Mostrar la cara opuesta en letras
+# Mostrar la cara opuesta en letras
     print(f"La cara opuesta al {numero_dado} es: {cara_opuesta}")
