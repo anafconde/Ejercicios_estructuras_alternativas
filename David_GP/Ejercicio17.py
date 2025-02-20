@@ -6,43 +6,26 @@
 #Nota 1: En las caras opuestas de un dado de seis caras están los números: 1-6, 2-5 y 3-4.
 #Nota 2: Si el número del dado introducido es menor que 1 o mayor que 6, se mostrará el mensaje: “ERROR: número incorrecto.”.
 
-def numero_a_letras(numero):
-#Convierte un número a su equivalente en palabras
-    numeros_en_letras = {
-        1: "uno",
-        2: "dos",
-        3: "tres",
-        4: "cuatro",
-        5: "cinco",
-        6: "seis"
-    }
-    return numeros_en_letras.get(numero, "ERROR: número incorrecto")
+# Pedir al usuario que ingrese el resultado del dado
+numero_dado = int(input("Ingresa el número del dado (1-6): "))
 
-def cara_opuesta(cara):
-#Devuelve la cara opuesta del dado según el número introducido
-    if cara == 1:
-        return 6
-    elif cara == 2:
-        return 5
-    elif cara == 3:
-        return 4
-    elif cara == 4:
-        return 3
-    elif cara == 5:
-        return 2
-    elif cara == 6:
-        return 1
-    else:
-        return None  # En caso de número fuera de rango
-
-# Solicitar el resultado del dado
-resultado = int(input("Introduce el número obtenido al lanzar el dado (1-6): "))
-
-# Verificar si el número es válido y mostrar el resultado
-cara_opuesta_resultado = cara_opuesta(resultado)
-
-if cara_opuesta_resultado is None:
+# Verificar si el número es válido
+if numero_dado < 1 or numero_dado > 6:
     print("ERROR: número incorrecto.")
 else:
-    # Mostrar la cara opuesta en números y en letras
-    print(f"La cara opuesta al número {resultado} es {cara_opuesta_resultado} ({numero_a_letras(cara_opuesta_resultado)})")
+    # Determinar la cara opuesta
+    if numero_dado == 1:
+        cara_opuesta = "6"
+    elif numero_dado == 2:
+        cara_opuesta = "5"
+    elif numero_dado == 3:
+        cara_opuesta = "4"
+    elif numero_dado == 4:
+        cara_opuesta = "3"
+    elif numero_dado == 5:
+        cara_opuesta = "2"
+    else:
+        cara_opuesta = "1"
+
+    # Mostrar la cara opuesta en letras
+    print(f"La cara opuesta al {numero_dado} es: {cara_opuesta}")
