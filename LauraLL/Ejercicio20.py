@@ -14,22 +14,26 @@ print("----------------------------------------")
 
 opc=int(input("Introduzca el número de la opción a elegir: "))
 
-peso=float(input("Introduzca el peso (en gramos) del paquete a enviar: "))
+peso=float(input("Introduzca el peso (en kilogramos) del paquete a enviar: "))
+peso=float(peso*1000)
 
-if opc==1:
-    coste=peso*24
-    print(f"El coste del envío de su paquete a América del Norte será de {coste} €")
-elif opc==2:
-    coste=peso*20
-    print(f"El coste del envío de su paquete a América Central será de {coste} €")
-elif opc==3:
-    coste=peso*21
-    print(f"El coste del envío de su paquete a América del Sur será de {coste} €")
-elif opc==4:
-    coste=peso*10
-    print(f"El coste del envío de su paquete a Europa será de {coste} €")
-elif opc==5:
-    coste=peso*18
-    print(f"El coste del envío de su paquete a Asia será de {coste} €")
+if peso>5000:
+    print("El peso supera el excedido")
 else:
-    print("Valor introducido incorrecto")
+    if opc==1:
+        coste=peso*24
+        print(f"El coste del envío de su paquete a América del Norte será de {coste} €")
+    elif opc==2:
+        coste=peso*20
+        print(f"El coste del envío de su paquete a América Central será de {coste} €")
+    elif opc==3:
+        coste=peso*21
+        print(f"El coste del envío de su paquete a América del Sur será de {coste} €")
+    elif opc==4:
+        coste=peso*10
+        print(f"El coste del envío de su paquete a Europa será de {coste} €")
+    elif opc==5:
+        coste=peso*18
+        print(f"El coste del envío de su paquete a Asia será de {coste} €")
+    else:
+        print("Valor introducido incorrecto")
